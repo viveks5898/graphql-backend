@@ -1,10 +1,6 @@
 import React from "react";
 const List = (props) => {
-  console.log(props.data.length, props.startItem, props.showItem);
-  console.log(
-    "asddsa",
-    props.data.slice(props.startItem, props.showItem).length
-  );
+
 
   return (
 
@@ -27,10 +23,8 @@ const List = (props) => {
         </div>
       ))}
       {props.data.slice(props.startItem, props.showItem).length == 10 ? (
-        <p
-          onClick={() => props.arrowHandle()}
-          className="arrow-key"
-        > key</p>
+         <i    onClick={() => props.arrowHandle()}
+        className="arrow-key fa fa-sort-desc" aria-hidden="true"></i>
       ) : (
         ""
       )}
@@ -56,7 +50,8 @@ const List = (props) => {
         <p
           onClick={() => props.arrowHandle()}
           className="arrow-key"
-        > key</p>
+        > <i class="fa fa-sort-desc" aria-hidden="true"></i>
+        </p>
       ) : (
         ""
       )}

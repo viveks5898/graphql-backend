@@ -15,7 +15,9 @@
   display: none !important;
   
 }
-
+.fa .fa-exclamation-circle{
+  color: white !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -24,6 +26,9 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+  .fa .fa-exclamation-circle{
+    color: white !important;
   }
 }
 
@@ -37,7 +42,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.fa .fa-exclamation-circle{
+  color: white !important;
+}
 .App-link {
   color: #61dafb;
 }
@@ -58,14 +65,18 @@ button.react-butt {
   position: absolute;
   background: aqua;
 }
+.controls i {
+  font-size: 25px;
+  color: #fff;
+}
 .controls {
   position: absolute;
   z-index: 999;
   color: #ffff;
   display: flex;
   gap: 1.4rem;
-  bottom: 44px;
-  right: 215px;
+  bottom: 28px;
+  right: 300px;
 }
 .list-vidoe {
   background-color: #0000009c;
@@ -195,6 +206,9 @@ video {
     padding-right: 18px;
     line-height: 6px;
 }
+.fa .fa-exclamation-circle{
+  color: white !important;
+}
 .controls{
   display: none;
 }
@@ -240,5 +254,8 @@ video {    position: unset;
     padding-left: 18px;
     padding-right: 18px;
     line-height: 6px;
+}
+.fa .fa-exclamation-circle{
+  color: white !important;
 }
 }

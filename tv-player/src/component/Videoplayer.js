@@ -303,8 +303,12 @@ const Videoplayer = () => {
       <div className="controls">
         <div className="errorr">
           <a href="https://www.google.com" target="_blank">  
-          link
+
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+
           </a>
+   
+
         </div>
         {/* 
         <div className="caption">
@@ -312,7 +316,8 @@ const Videoplayer = () => {
         </div> */}
 
         <div className="setting">
-         setting
+        <i class="fa fa-cog" aria-hidden="true"></i>
+
         </div>
         <div className="list">
           <p  onClick={() => {
@@ -321,7 +326,8 @@ const Videoplayer = () => {
               } else {
                 setList(true);
               }
-            }}>   order </p>
+            }}>   <i class="fa fa-bars" aria-hidden="true"></i>
+            </p>
        
         </div>
       </div>
@@ -346,7 +352,9 @@ const Videoplayer = () => {
         <p
           onClick={() => arrowHandle()}
           className="arrow-key"
-        >arr</p>
+        >
+          <i class="fa-thin fa-chevron-down"></i>
+        </p>
       ) : (
         ""
       )}
