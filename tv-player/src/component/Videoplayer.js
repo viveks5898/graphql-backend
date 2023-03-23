@@ -339,10 +339,10 @@ const Videoplayer = () => {
           onClick={() => handleList(key)}
           key={key}
         >
-          <div className="col-4 list-img">
-            <img src={ele.image} />
+          <div className="col-12 col-md-4 list-img">
+            <img class="w-100" src={ele.image} />
           </div>
-          <div className="col-8">
+          <div className="col-12 col-md-8 text-start ">
             <h4>{ele.name} </h4>
             <h6>{ele.subtitle}</h6>
           </div>

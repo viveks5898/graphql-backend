@@ -259,3 +259,7 @@ video {    position: unset;
   color: white !important;
 }
 }
+.list-vidoe-mobile .col-12.col-md-8.text-start {
+  padding-left: 40px;
+  padding-top: 9px;
+}
