@@ -8,3 +8,4 @@ const BookSchema = new Schema({
 });
 const Book = model("Book", BookSchema);
 export default Book;
+
