@@ -26,3 +26,14 @@ export const BookController = async (req, res) => {
         console.log(err)
      }
  }
+
+   export const getBookController = async (req, res) =>{
+     try{
+
+      const data = await Book.find()
+      res.send(data)
+     }
+      catch {
+
+      }
+   }

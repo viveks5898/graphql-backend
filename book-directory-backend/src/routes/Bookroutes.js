@@ -1,7 +1,8 @@
 import { Router } from "express";
-import { BookController } from "../controller/Bookcontroller.js";
-import { bookSearchCOntroller } from "../controller/Bookcontroller.js";
+import { BookController, getBookController } from "../controller/Bookcontroller.js";
 const router = Router();
 
 router.post("/createBook", BookController);
+router.get("/getBooks", getBookController);
+
 export default router;
