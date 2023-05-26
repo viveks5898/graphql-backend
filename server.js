@@ -5,10 +5,10 @@ const { ApolloServer } = require("apollo-server");
 const resolvers = require("./resolver.js");
 const typeDefs = require("./model/schema.js");
 const User = require("./model/user.js");
-
+const jwt = require("jsonwebtoken")
 const mongoose = require("mongoose");
 const { MONGO_URI } = require("./config.js");
-
+const JWT_SECRET="sdlknknni2io328923u4bjh2312bjhb12"
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -25,6 +25,13 @@ db.on("error", (err) => {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+//   context:(req)=>{
+//   const {authorization} = req.headers
+//   if(authorization){
+//   const {userId} = jwt.verify(authorization, JWT_SECRET)
+// return userId
+//   }
+// },
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
 });
 server.listen().then(({ url }) => {

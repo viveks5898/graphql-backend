@@ -13,8 +13,7 @@ const resolvers = {
 
   Mutation: {
     signupUser: async (parent, { userNew }) => {
-      const user = User.findOne({ email: userNew.email });
-       console.log(user)
+      const user = await User.findOne({ email: userNew.email });
       if (user) {
         throw new Error("user already exist");
       }
@@ -27,6 +26,9 @@ const resolvers = {
 
       return await newUser.save();
     },
+    // createQuote :(parent,{name}, {userId})=>{
+    //   if(!userId) throw new Error("you must be logged in")
+    // }
   },
 };
 
